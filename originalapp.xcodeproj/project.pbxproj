@@ -7,14 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4F4A739F32B4BFF2E7D895F /* Pods_originalapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6411628900FDAC68383977 /* Pods_originalapp.framework */; };
+		DA616E3B1E8F7B8B00930ED7 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA616E3A1E8F7B8B00930ED7 /* Weather.swift */; };
+		DA616E421E8F866400930ED7 /* ESTabBarController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA616E3C1E8F866400930ED7 /* ESTabBarController.framework */; };
+		DA616E431E8F866400930ED7 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA616E3D1E8F866400930ED7 /* GoogleToolboxForMac.framework */; };
+		DA616E441E8F866400930ED7 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA616E3E1E8F866400930ED7 /* GTMSessionFetcher.framework */; };
+		DA616E451E8F866400930ED7 /* JSQMessagesViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA616E3F1E8F866400930ED7 /* JSQMessagesViewController.framework */; };
+		DA616E461E8F866400930ED7 /* JSQSystemSoundPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA616E401E8F866400930ED7 /* JSQSystemSoundPlayer.framework */; };
+		DA616E471E8F866400930ED7 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA616E411E8F866400930ED7 /* SVProgressHUD.framework */; };
+		DA616E491E8FBEE300930ED7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA616E481E8FBEE300930ED7 /* SwiftyJSON.framework */; };
 		DA7F245F1E87556A00867DC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F245E1E87556A00867DC4 /* AppDelegate.swift */; };
 		DA7F24611E87556B00867DC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F24601E87556B00867DC4 /* ViewController.swift */; };
 		DA7F24641E87556B00867DC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA7F24621E87556B00867DC4 /* Main.storyboard */; };
 		DA7F24661E87556B00867DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA7F24651E87556B00867DC4 /* Assets.xcassets */; };
 		DA7F24691E87556B00867DC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA7F24671E87556B00867DC4 /* LaunchScreen.storyboard */; };
+		DA7F24731E87615900867DC4 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F24721E87615900867DC4 /* API.swift */; };
+		DA7F24751E87616900867DC4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7F24741E87616900867DC4 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		368956B4A79E7F42F9487DFA /* Pods-originalapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-originalapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-originalapp/Pods-originalapp.release.xcconfig"; sourceTree = "<group>"; };
+		5D6411628900FDAC68383977 /* Pods_originalapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_originalapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D376839B8EAA6CCD03A2B8CE /* Pods-originalapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-originalapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-originalapp/Pods-originalapp.debug.xcconfig"; sourceTree = "<group>"; };
+		DA616E3A1E8F7B8B00930ED7 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = SOURCE_ROOT; };
+		DA616E3C1E8F866400930ED7 /* ESTabBarController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ESTabBarController.framework; path = "Pods/../build/Debug-iphoneos/ESTabBarController/ESTabBarController.framework"; sourceTree = "<group>"; };
+		DA616E3D1E8F866400930ED7 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "Pods/../build/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
+		DA616E3E1E8F866400930ED7 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = "Pods/../build/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework"; sourceTree = "<group>"; };
+		DA616E3F1E8F866400930ED7 /* JSQMessagesViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSQMessagesViewController.framework; path = "Pods/../build/Debug-iphoneos/JSQMessagesViewController/JSQMessagesViewController.framework"; sourceTree = "<group>"; };
+		DA616E401E8F866400930ED7 /* JSQSystemSoundPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSQSystemSoundPlayer.framework; path = "Pods/../build/Debug-iphoneos/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework"; sourceTree = "<group>"; };
+		DA616E411E8F866400930ED7 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = "Pods/../build/Debug-iphoneos/SVProgressHUD/SVProgressHUD.framework"; sourceTree = "<group>"; };
+		DA616E481E8FBEE300930ED7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/originalapp-amapbbwavcbtdufbylvfmhxnwpdq/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		DA7F245B1E87556A00867DC4 /* originalapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = originalapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7F245E1E87556A00867DC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA7F24601E87556B00867DC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +44,8 @@
 		DA7F24651E87556B00867DC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA7F24681E87556B00867DC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA7F246A1E87556B00867DC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA7F24721E87615900867DC4 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		DA7F24741E87616900867DC4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/originalapp-amapbbwavcbtdufbylvfmhxnwpdq/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA616E491E8FBEE300930ED7 /* SwiftyJSON.framework in Frameworks */,
+				DA616E421E8F866400930ED7 /* ESTabBarController.framework in Frameworks */,
+				DA616E431E8F866400930ED7 /* GoogleToolboxForMac.framework in Frameworks */,
+				DA616E441E8F866400930ED7 /* GTMSessionFetcher.framework in Frameworks */,
+				DA616E451E8F866400930ED7 /* JSQMessagesViewController.framework in Frameworks */,
+				DA616E461E8F866400930ED7 /* JSQSystemSoundPlayer.framework in Frameworks */,
+				DA616E471E8F866400930ED7 /* SVProgressHUD.framework in Frameworks */,
+				DA7F24751E87616900867DC4 /* Alamofire.framework in Frameworks */,
+				D4F4A739F32B4BFF2E7D895F /* Pods_originalapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B5FA99C4014DA6482230499 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D376839B8EAA6CCD03A2B8CE /* Pods-originalapp.debug.xcconfig */,
+				368956B4A79E7F42F9487DFA /* Pods-originalapp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DA7F24521E87556A00867DC4 = {
 			isa = PBXGroup;
 			children = (
 				DA7F245D1E87556A00867DC4 /* originalapp */,
 				DA7F245C1E87556A00867DC4 /* Products */,
+				3B5FA99C4014DA6482230499 /* Pods */,
+				EE16C39942DCA81C9D828D6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +100,30 @@
 			children = (
 				DA7F245E1E87556A00867DC4 /* AppDelegate.swift */,
 				DA7F24601E87556B00867DC4 /* ViewController.swift */,
+				DA616E3A1E8F7B8B00930ED7 /* Weather.swift */,
 				DA7F24621E87556B00867DC4 /* Main.storyboard */,
 				DA7F24651E87556B00867DC4 /* Assets.xcassets */,
 				DA7F24671E87556B00867DC4 /* LaunchScreen.storyboard */,
 				DA7F246A1E87556B00867DC4 /* Info.plist */,
+				DA7F24721E87615900867DC4 /* API.swift */,
 			);
 			path = originalapp;
+			sourceTree = "<group>";
+		};
+		EE16C39942DCA81C9D828D6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA616E481E8FBEE300930ED7 /* SwiftyJSON.framework */,
+				DA616E3C1E8F866400930ED7 /* ESTabBarController.framework */,
+				DA616E3D1E8F866400930ED7 /* GoogleToolboxForMac.framework */,
+				DA616E3E1E8F866400930ED7 /* GTMSessionFetcher.framework */,
+				DA616E3F1E8F866400930ED7 /* JSQMessagesViewController.framework */,
+				DA616E401E8F866400930ED7 /* JSQSystemSoundPlayer.framework */,
+				DA616E411E8F866400930ED7 /* SVProgressHUD.framework */,
+				DA7F24741E87616900867DC4 /* Alamofire.framework */,
+				5D6411628900FDAC68383977 /* Pods_originalapp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA7F246D1E87556B00867DC4 /* Build configuration list for PBXNativeTarget "originalapp" */;
 			buildPhases = (
+				DF8CAD4FC99C326D6E0DED24 /* [CP] Check Pods Manifest.lock */,
 				DA7F24571E87556A00867DC4 /* Sources */,
 				DA7F24581E87556A00867DC4 /* Frameworks */,
 				DA7F24591E87556A00867DC4 /* Resources */,
+				F3410926AC68EE9A2944153C /* [CP] Embed Pods Frameworks */,
+				334F3CAEE031B5DF9468BB9E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +161,7 @@
 				TargetAttributes = {
 					DA7F245A1E87556A00867DC4 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = UYHMQR2W46;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,12 +197,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		334F3CAEE031B5DF9468BB9E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-originalapp/Pods-originalapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF8CAD4FC99C326D6E0DED24 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F3410926AC68EE9A2944153C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-originalapp/Pods-originalapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DA7F24571E87556A00867DC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA616E3B1E8F7B8B00930ED7 /* Weather.swift in Sources */,
 				DA7F24611E87556B00867DC4 /* ViewController.swift in Sources */,
+				DA7F24731E87615900867DC4 /* API.swift in Sources */,
 				DA7F245F1E87556A00867DC4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,8 +372,19 @@
 		};
 		DA7F246E1E87556B00867DC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D376839B8EAA6CCD03A2B8CE /* Pods-originalapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UYHMQR2W46;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ESTabBarController",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/GoogleToolboxForMac",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/GTMSessionFetcher",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/JSQMessagesViewController",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/JSQSystemSoundPlayer",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SVProgressHUD",
+				);
 				INFOPLIST_FILE = originalapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.kazuki.kumagai.originalapp;
@@ -268,8 +395,19 @@
 		};
 		DA7F246F1E87556B00867DC4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 368956B4A79E7F42F9487DFA /* Pods-originalapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UYHMQR2W46;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/ESTabBarController",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/GoogleToolboxForMac",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/GTMSessionFetcher",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/JSQMessagesViewController",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/JSQSystemSoundPlayer",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/SVProgressHUD",
+				);
 				INFOPLIST_FILE = originalapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.kazuki.kumagai.originalapp;
@@ -297,6 +435,7 @@
 				DA7F246F1E87556B00867DC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
