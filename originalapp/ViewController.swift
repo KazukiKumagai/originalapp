@@ -113,69 +113,69 @@ class ViewController: JSQMessagesViewController {
             // レスポンス処理開始ログ
             print("=============== API response manage start ===============")
             
-            // ここでエラー回避として、レスポンスwrap失敗の場合のログ吐いて抜けておく
-            guard let object = response.result.value else {
-                print("response.result.value nil!!")
-                return
-            }
-            
-//            print(response.request)  // original URL request
-//            print(response.response) // HTTP URL response
-//            print(response.data)     // server data
-//            print(response.result)   // result of response serialization
-            
-            // JSONオブジェクト生成
-            let json = JSON(object)
-            json.forEach { (_, json) in
-                
-                // ステータス
-                if let status = json["Status"].string {
-                    print("API Response status: \(status)")
-                }
-                
-                // ひとまずJSON中身開示
-                print("json description: \(json)")
-                
-                json.arrayValue.forEach{ (obj) in
+            //            print(response.request)  // original URL request
+            //            print(response.response) // HTTP URL response
+            //            print(response.data)     // server data
+            //            print(response.result)   // result of response serialization
+
+            // alamofireエラーハンドリング
+            switch response.result {
+            case .success(let object):
+                // JSONオブジェクト生成
+                let json = JSON(object)
+                json.forEach { (_, json) in
                     
-                    /*
-                     本来ならここで展開すると同時にModelを作成しておくべき
-                     */
-                    
-                    print("obj: \(obj)")
-                    // Name取得
-                    if let name = obj["Name"].string {
-                        // 名前(name)取得
-                        print("Name: \(name)")
-                        
-                        if let nameMessage = JSQMessage(senderId: "test-doi", displayName: "テスト土井君", text: "名前は\n\(name)\nやがな！") {
-                            self.messages?.append(nameMessage)
-                            self.finishReceivingMessage()
-                        }
-                    } else {
-                        // ない場合は処理飛ばし
-                        print("名前とれへんがな！")
+                    // ステータス
+                    if let status = json["Status"].string {
+                        print("API Response status: \(status)")
                     }
                     
-                    // whether展開処理
-                    obj["Property"].dictionaryValue["WeatherList"]?.dictionaryValue["Weather"]?.arrayValue.forEach{ (weather) in
-                        print("Weather: \(weather)")
-                        if let rainFall = weather["Rainfall"].int, let date = weather["Date"].string {
-                            print("\(date)の雨の確率\(rainFall)やがな！")
-                            if let nameMessage = JSQMessage(senderId: "test-doi", displayName: "テスト土井君", text: "\(date)の雨の確率\(rainFall)やがな！") {
+                    // ひとまずJSON中身開示
+                    print("json description: \(json)")
+                    
+                    json.arrayValue.forEach{ (obj) in
+                        
+                        /*
+                         本来ならここで展開すると同時にModelを作成しておくべき
+                         */
+                        
+                        print("obj: \(obj)")
+                        // Name取得
+                        if let name = obj["Name"].string {
+                            // 名前(name)取得
+                            print("Name: \(name)")
+                            
+                            if let nameMessage = JSQMessage(senderId: "test-doi", displayName: "テスト土井君", text: "名前は\n\(name)\nやがな！") {
                                 self.messages?.append(nameMessage)
                                 self.finishReceivingMessage()
                             }
-                            
                         } else {
-                            print("雨の確率わからんがな！")
+                            // ない場合は処理飛ばし
+                            print("名前とれへんがな！")
                         }
+                        
+                        // whether展開処理
+                        obj["Property"].dictionaryValue["WeatherList"]?.dictionaryValue["Weather"]?.arrayValue.forEach{ (weather) in
+                            print("Weather: \(weather)")
+                            if let rainFall = weather["Rainfall"].int, let date = weather["Date"].string {
+                                print("\(date)の雨の確率\(rainFall)やがな！")
+                                if let nameMessage = JSQMessage(senderId: "test-doi", displayName: "テスト土井君", text: "\(date)の雨の確率\(rainFall)やがな！") {
+                                    self.messages?.append(nameMessage)
+                                    self.finishReceivingMessage()
+                                }
+                                
+                            } else {
+                                print("雨の確率わからんがな！")
+                            }
+                        }
+                        
                     }
                     
                 }
-                
+            case .failure(let error):
+                print("ERROR: \(error)")
             }
-
+            
             // レスポンス処理終了ログ
             print("=============== API response manage end ===============")
         }
