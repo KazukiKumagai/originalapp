@@ -1,0 +1,10 @@
+# mac関連無視
+.DS_Store
+
+# xcode系うざいの無視
+originalapp.xcworkspace/xcuserdata/*
+originalapp.xcodeproj/xcuserdata/*
+
+# Cocoapods 無視
+Pods/*
+

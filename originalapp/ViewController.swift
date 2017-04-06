@@ -109,16 +109,75 @@ class ViewController: JSQMessagesViewController {
         //let url:String = "https://map.yahooapis.jp/weather/V1/place?coordinates=" + String("\(longitude)") + "," + String("\(latitude)")
         
         Alamofire.request("https://map.yahooapis.jp/weather/V1/place?coordinates=139.732293,35.663613&appid=dj0zaiZpPW5nTVJsMUFYcUZZZyZzPWNvbnN1bWVyc2VjcmV0Jng9ZWM-&output=json").responseJSON { response in
-            print(response.request)  // original URL request
-            print(response.response) // HTTP URL response
-            print(response.data)     // server data
-            print(response.result)   // result of response serialization
             
-            let json = JSON(response.result.value)
-            json.forEach { (_, json) in
-                print(json["YDF"]["ResultInfo"]) // 記事タイトルを表示
-            }
+            // レスポンス処理開始ログ
+            print("=============== API response manage start ===============")
+            
+            //            print(response.request)  // original URL request
+            //            print(response.response) // HTTP URL response
+            //            print(response.data)     // server data
+            //            print(response.result)   // result of response serialization
 
+            // alamofireエラーハンドリング
+            switch response.result {
+            case .success(let object):
+                // JSONオブジェクト生成
+                let json = JSON(object)
+                json.forEach { (_, json) in
+                    
+                    // ステータス
+                    if let status = json["Status"].string {
+                        print("API Response status: \(status)")
+                    }
+                    
+                    // ひとまずJSON中身開示
+                    print("json description: \(json)")
+                    
+                    json.arrayValue.forEach{ (obj) in
+                        
+                        /*
+                         本来ならここで展開すると同時にModelを作成しておくべき
+                         */
+                        
+                        print("obj: \(obj)")
+                        // Name取得
+                        if let name = obj["Name"].string {
+                            // 名前(name)取得
+                            print("Name: \(name)")
+                            
+                            if let nameMessage = JSQMessage(senderId: "test-doi", displayName: "テスト土井君", text: "名前は\n\(name)\nやがな！") {
+                                self.messages?.append(nameMessage)
+                                self.finishReceivingMessage()
+                            }
+                        } else {
+                            // ない場合は処理飛ばし
+                            print("名前とれへんがな！")
+                        }
+                        
+                        // whether展開処理
+                        obj["Property"].dictionaryValue["WeatherList"]?.dictionaryValue["Weather"]?.arrayValue.forEach{ (weather) in
+                            print("Weather: \(weather)")
+                            if let rainFall = weather["Rainfall"].int, let date = weather["Date"].string {
+                                print("\(date)の雨の確率\(rainFall)やがな！")
+                                if let nameMessage = JSQMessage(senderId: "test-doi", displayName: "テスト土井君", text: "\(date)の雨の確率\(rainFall)やがな！") {
+                                    self.messages?.append(nameMessage)
+                                    self.finishReceivingMessage()
+                                }
+                                
+                            } else {
+                                print("雨の確率わからんがな！")
+                            }
+                        }
+                        
+                    }
+                    
+                }
+            case .failure(let error):
+                print("ERROR: \(error)")
+            }
+            
+            // レスポンス処理終了ログ
+            print("=============== API response manage end ===============")
         }
     }
     
