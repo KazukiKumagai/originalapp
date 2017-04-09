@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		D4F4A739F32B4BFF2E7D895F /* Pods_originalapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6411628900FDAC68383977 /* Pods_originalapp.framework */; };
+		DA3425A31E9A077F003BAAD0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA3425A21E9A077F003BAAD0 /* GoogleService-Info.plist */; };
+		DA3425A51E9A081E003BAAD0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3425A41E9A081E003BAAD0 /* LoginViewController.swift */; };
+		DA3425A71E9A38BC003BAAD0 /* Const..swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3425A61E9A38BC003BAAD0 /* Const..swift */; };
 		DA616E3B1E8F7B8B00930ED7 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA616E3A1E8F7B8B00930ED7 /* Weather.swift */; };
 		DA616E421E8F866400930ED7 /* ESTabBarController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA616E3C1E8F866400930ED7 /* ESTabBarController.framework */; };
 		DA616E431E8F866400930ED7 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA616E3D1E8F866400930ED7 /* GoogleToolboxForMac.framework */; };
@@ -29,6 +32,9 @@
 		368956B4A79E7F42F9487DFA /* Pods-originalapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-originalapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-originalapp/Pods-originalapp.release.xcconfig"; sourceTree = "<group>"; };
 		5D6411628900FDAC68383977 /* Pods_originalapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_originalapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D376839B8EAA6CCD03A2B8CE /* Pods-originalapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-originalapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-originalapp/Pods-originalapp.debug.xcconfig"; sourceTree = "<group>"; };
+		DA3425A21E9A077F003BAAD0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DA3425A41E9A081E003BAAD0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DA3425A61E9A38BC003BAAD0 /* Const..swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const..swift; sourceTree = "<group>"; };
 		DA616E3A1E8F7B8B00930ED7 /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = SOURCE_ROOT; };
 		DA616E3C1E8F866400930ED7 /* ESTabBarController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ESTabBarController.framework; path = "Pods/../build/Debug-iphoneos/ESTabBarController/ESTabBarController.framework"; sourceTree = "<group>"; };
 		DA616E3D1E8F866400930ED7 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "Pods/../build/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
@@ -100,10 +106,13 @@
 			children = (
 				DA7F245E1E87556A00867DC4 /* AppDelegate.swift */,
 				DA7F24601E87556B00867DC4 /* ViewController.swift */,
+				DA3425A61E9A38BC003BAAD0 /* Const..swift */,
 				DA616E3A1E8F7B8B00930ED7 /* Weather.swift */,
 				DA7F24621E87556B00867DC4 /* Main.storyboard */,
+				DA3425A41E9A081E003BAAD0 /* LoginViewController.swift */,
 				DA7F24651E87556B00867DC4 /* Assets.xcassets */,
 				DA7F24671E87556B00867DC4 /* LaunchScreen.storyboard */,
+				DA3425A21E9A077F003BAAD0 /* GoogleService-Info.plist */,
 				DA7F246A1E87556B00867DC4 /* Info.plist */,
 				DA7F24721E87615900867DC4 /* API.swift */,
 			);
@@ -190,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA7F24691E87556B00867DC4 /* LaunchScreen.storyboard in Resources */,
+				DA3425A31E9A077F003BAAD0 /* GoogleService-Info.plist in Resources */,
 				DA7F24661E87556B00867DC4 /* Assets.xcassets in Resources */,
 				DA7F24641E87556B00867DC4 /* Main.storyboard in Resources */,
 			);
@@ -253,6 +263,8 @@
 				DA616E3B1E8F7B8B00930ED7 /* Weather.swift in Sources */,
 				DA7F24611E87556B00867DC4 /* ViewController.swift in Sources */,
 				DA7F24731E87615900867DC4 /* API.swift in Sources */,
+				DA3425A51E9A081E003BAAD0 /* LoginViewController.swift in Sources */,
+				DA3425A71E9A38BC003BAAD0 /* Const..swift in Sources */,
 				DA7F245F1E87556A00867DC4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

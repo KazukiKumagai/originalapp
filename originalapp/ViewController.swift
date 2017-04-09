@@ -10,6 +10,8 @@ import UIKit
 import JSQMessagesViewController
 import Alamofire
 import SwiftyJSON
+import FirebaseDatabase
+import Firebase
 
 class ViewController: JSQMessagesViewController {
     
@@ -54,6 +56,14 @@ class ViewController: JSQMessagesViewController {
         //メッセジの送信処理を完了する(画面上にメッセージが表示される)
         self.finishReceivingMessage(animated: true)
         
+        
+        // 辞書を作成してFirebaseに保存する
+        let time:String = self.messages?.last?.date
+        let postRef = FIRDatabase.database().reference().child(Const.PostPath)
+        let postData = ["senderID": self.messages?.last?.senderId, "senderDisplayName": self.messages?.last?.senderDisplayName, "date": time, "text": self.messages?.last?.text]
+        postRef.childByAutoId().setValue(postData)
+
+        self.view.endEditing(true)
         //擬似的に自動でメッセージを受信
         self.receiveAutoMessage()
         self.test()
@@ -102,7 +112,6 @@ class ViewController: JSQMessagesViewController {
         self.messages?.append(message!)
         self.finishReceivingMessage(animated: true)
     }
-    
     
     func test(){
         //func getWeatherByLL(longitude:Float, latitude:Float) {
@@ -179,6 +188,9 @@ class ViewController: JSQMessagesViewController {
             // レスポンス処理終了ログ
             print("=============== API response manage end ===============")
         }
+    }
+    @IBAction func tapScreen(_ sender: Any) {
+        self.view.endEditing(true)
     }
     
 }
