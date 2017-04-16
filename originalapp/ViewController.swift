@@ -21,9 +21,10 @@ class ViewController: JSQMessagesViewController {
     var incomingAvatar: JSQMessagesAvatarImage!
     var outgoingAvatar: JSQMessagesAvatarImage!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.collectionView.keyboardDismissMode = .interactive
         //自分のsenderId, senderDisokayNameを設定
         self.senderId = "user1"
         self.senderDisplayName = "hoge"
@@ -39,7 +40,18 @@ class ViewController: JSQMessagesViewController {
         
         //メッセージデータの配列を初期化
         self.messages = []
-        
+        let postsRef = FIRDatabase.database().reference().child(Const.PostPath)
+        //postsRef.observe(.childAdded, with: { snapshot in
+        postsRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            // PostDataクラスを生成して受け取ったデータを設定する
+            if let uid = FIRAuth.auth()?.currentUser?.uid {
+                print("DEBUG_PRINT: データ取得成功")
+                let postData = PostData(snapshot: snapshot, myId: uid)
+                let m = JSQMessage(senderId: postData.senderID, senderDisplayName: postData.displayName, date: postData.date! as Date, text: postData.text)
+                self.messages?.append(m!)
+            }
+        })
+        self.finishReceivingMessage()
     }
     
     override func didReceiveMemoryWarning() {
@@ -58,10 +70,11 @@ class ViewController: JSQMessagesViewController {
         
         
         // 辞書を作成してFirebaseに保存する
-        let time:String = self.messages?.last?.date
+        let time:String = String(self.messages!.last!.date.timeIntervalSinceReferenceDate)
         let postRef = FIRDatabase.database().reference().child(Const.PostPath)
         let postData = ["senderID": self.messages?.last?.senderId, "senderDisplayName": self.messages?.last?.senderDisplayName, "date": time, "text": self.messages?.last?.text]
         postRef.childByAutoId().setValue(postData)
+        
 
         self.view.endEditing(true)
         //擬似的に自動でメッセージを受信
@@ -189,6 +202,7 @@ class ViewController: JSQMessagesViewController {
             print("=============== API response manage end ===============")
         }
     }
+    
     @IBAction func tapScreen(_ sender: Any) {
         self.view.endEditing(true)
     }

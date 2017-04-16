@@ -26,6 +26,7 @@
 		DA7F24691E87556B00867DC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA7F24671E87556B00867DC4 /* LaunchScreen.storyboard */; };
 		DA7F24731E87615900867DC4 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7F24721E87615900867DC4 /* API.swift */; };
 		DA7F24751E87616900867DC4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA7F24741E87616900867DC4 /* Alamofire.framework */; };
+		DA8C6C391EA2105E00900D53 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8C6C381EA2105E00900D53 /* PostData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		DA7F246A1E87556B00867DC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA7F24721E87615900867DC4 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		DA7F24741E87616900867DC4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/originalapp-amapbbwavcbtdufbylvfmhxnwpdq/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		DA8C6C381EA2105E00900D53 /* PostData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				DA7F245E1E87556A00867DC4 /* AppDelegate.swift */,
 				DA7F24601E87556B00867DC4 /* ViewController.swift */,
 				DA3425A61E9A38BC003BAAD0 /* Const..swift */,
+				DA8C6C381EA2105E00900D53 /* PostData.swift */,
 				DA616E3A1E8F7B8B00930ED7 /* Weather.swift */,
 				DA7F24621E87556B00867DC4 /* Main.storyboard */,
 				DA3425A41E9A081E003BAAD0 /* LoginViewController.swift */,
@@ -266,6 +269,7 @@
 				DA3425A51E9A081E003BAAD0 /* LoginViewController.swift in Sources */,
 				DA3425A71E9A38BC003BAAD0 /* Const..swift in Sources */,
 				DA7F245F1E87556A00867DC4 /* AppDelegate.swift in Sources */,
+				DA8C6C391EA2105E00900D53 /* PostData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
